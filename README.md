@@ -1,6 +1,6 @@
 # AWS S3 Glacier Restore Utility
 
-Utility script to restore files on AWS S3 that have the GLACIER storage class.
+Utility scripts to manage and restore files on AWS S3 that have the GLACIER storage class.
 
 ## Installation
 
@@ -17,9 +17,11 @@ Utility script to restore files on AWS S3 that have the GLACIER storage class.
 pip install boto3
 ```
 
-2. Download or clone the `glacier-restore.py` script from the repository to your local machine.
+2. Download or clone the `glacier-restore.py` and `restore-status.py` scripts from the repository to your local machine.
 
 ## Usage
+
+### glacier-restore.py
 
 To use the `glacier-restore.py` script, navigate to the directory where you saved the script and execute the following command:
 
@@ -35,10 +37,26 @@ For example:
 python3 glacier-restore.py --bucket ryujt --prefix backup/music --days=7
 ```
 
+### restore-status.py
+
+To check the restoration status of objects in an S3 bucket, use the `restore-status.py` script:
+
+```
+python3 restore-status.py --bucket YOUR_BUCKET_NAME --prefix YOUR_PREFIX
+```
+
+Replace `YOUR_BUCKET_NAME` with the name of your S3 bucket and `YOUR_PREFIX` with the prefix (or folder) for which you want to check the restoration status.
+
+For example:
+
+```
+python3 restore-status.py --bucket ryujt --prefix backup/music
+```
+
 ## Troubleshooting
 
-If the script terminates immediately or doesn't seem to be working as expected:
+If the scripts terminate immediately or don't seem to be working as expected:
 
-1. Ensure that the AWS credentials are correctly set up. The script uses the same authentication and endpoint configuration as the AWS CLI.
+1. Ensure that the AWS credentials are correctly set up. The scripts use the same authentication and endpoint configuration as the AWS CLI.
 2. Double-check the bucket name and prefix for typos or errors.
-3. Add print statements or logs in the script to trace its execution and pinpoint any issues.
+3. Add print statements or logs in the scripts to trace their execution and pinpoint any issues.
