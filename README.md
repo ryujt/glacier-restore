@@ -32,7 +32,7 @@ Replace `YOUR_BUCKET_NAME` with the name of your S3 bucket, `YOUR_PREFIX` with t
 For example:
 
 ```
-python3 glacier-restore.py --bucket ryujt --prefix 파일창고/짤 --days=7
+python3 glacier-restore.py --bucket ryujt --prefix backup/music --days=7
 ```
 
 ## Troubleshooting
