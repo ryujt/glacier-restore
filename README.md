@@ -14,7 +14,7 @@ Utility scripts to manage and restore files on AWS S3 that have the GLACIER stor
 1. Install the required `boto3` library using pip:
 
 ```
-pip install boto3
+pip3 install boto3
 ```
 
 2. Download or clone the `glacier-restore.py` and `restore-status.py` scripts from the repository to your local machine.
